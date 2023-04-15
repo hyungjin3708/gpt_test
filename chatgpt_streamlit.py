@@ -1,7 +1,7 @@
 import openai
 import streamlit as st
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 def BasicGeneration(userPrompt):
   completion = openai.ChatCompletion.create(
@@ -10,7 +10,7 @@ def BasicGeneration(userPrompt):
   messages = [
     {"role": "user", "content": userPrompt}
   ],
-  max_tokens=1000
+  max_tokens=500
   )
   return completion.choices[0].message.content
 
